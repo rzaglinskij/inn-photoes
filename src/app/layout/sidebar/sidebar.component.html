@@ -1,0 +1,17 @@
+<div class="row">
+  <ul class="nav flex-column">
+    <li class="nav-item">
+      <a class="nav-link" [routerLink]="['/files']">Files</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" [routerLink]="['/photoes']">Photoes</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" [routerLink]="['/sharing']">Sharing</a>
+    </li>
+  </ul>
+</div>
+
+<div class="row attributes">
+  <span>{{folderData.files}} files / {{folderData.size | fileSize}}</span>
+</div>

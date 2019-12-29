@@ -1,0 +1,22 @@
+<!--<div class="col-lg-3 col-md-4 col-xs-6">-->
+  <!--&lt;!&ndash;<a>&ndash;&gt;-->
+  <!--<img class="img-thumbnail" src="{{ photo.url }}"/>-->
+  <!--<div class="attributes">-->
+    <!--<span>{{ photo.modified * 1000 | date: "short" }}</span><br/>-->
+    <!--<span>{{ (+photo.size | fileSize) }} </span>-->
+  <!--</div>-->
+  <!--&lt;!&ndash;</a>&ndash;&gt;-->
+<!--</div>-->
+
+
+
+<div class="card">
+  <img src="{{ photo.url }}" class="card-img-top" alt="{{ photo.name }}">
+  <div class="card-body">
+    <h5 class="card-title">{{ photo.name }}</h5>
+    <p class="card-text attributes">
+      <span>{{ photo.modified * 1000 | date: "short" }}</span><br/>
+      <span>{{ (+photo.size | fileSize) }} </span>
+    </p>
+  </div>
+</div>

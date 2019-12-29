@@ -1,0 +1,15 @@
+@import "../../../assets/styles-variables";
+
+:host {
+  background-color: $blue_light;
+  padding-right: 20px;
+  padding-top: 20px;
+  min-height: 100vh;
+  width:300px;
+}
+
+.attributes {
+  p {
+    display: block !important;
+  }
+}
