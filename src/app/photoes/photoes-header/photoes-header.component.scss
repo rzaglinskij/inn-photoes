@@ -1,7 +1,21 @@
+@import "../../../assets/styles-variables";
+
 form {
   display: flex;
   justify-content: flex-end;
   input {
+    display: none;
     margin-left: 10px;
+    &:checked + label {
+      color: white;
+      background-color: $sidebar_bg;
+    }
+  }
+  label {
+    display: inline-block;
+    background-color: $sidebar_color;
+    padding: 4px 11px;
+    font-size: 16px;
+    cursor: pointer;
   }
 }

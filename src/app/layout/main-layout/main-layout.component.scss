@@ -1,4 +1,21 @@
+@import "../../../assets/styles-variables";
+
+:host {
+  position: relative;
+  display: flex;
+}
+
 .container-fluid {
   padding-left: 0px;
   padding-right: 0px;
+}
+
+
+.fixed {
+  position: fixed;
+  width: 25%;
+}
+.scrollit {
+  float: left;
+  width: 71%
 }
