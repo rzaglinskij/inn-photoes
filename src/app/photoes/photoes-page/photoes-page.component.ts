@@ -3,7 +3,7 @@ import { PhotoesService } from "../../core/services/photoes.service";
 import { takeUntil } from "rxjs/operators";
 import { Subject } from "rxjs/internal/Subject";
 import { PhotoesInterface } from "../../core/interfaces/photoes.interface";
-import {UtilsService} from "../../core/services/utils.service";
+import { UtilsService } from "../../core/services/utils.service";
 
 @Component({
   selector: "app-photoes-page",
@@ -16,10 +16,7 @@ export class PhotoesPageComponent implements OnInit, OnDestroy {
 
   destroy$: Subject<boolean> = new Subject<boolean>();
 
-  constructor(
-    private _photoes: PhotoesService,
-    private _utils: UtilsService,
-    ) {}
+  constructor(private _photoes: PhotoesService, private _utils: UtilsService) {}
 
   ngOnInit() {
     this._photoes
@@ -43,8 +40,8 @@ export class PhotoesPageComponent implements OnInit, OnDestroy {
       if (value.hasOwnProperty(filter)) {
         switch (value[filter]) {
           case "name":
-            this.photoesListFiltered = this.photoesList.sort(
-              (a, b) => a.name.localeCompare(b.name)
+            this.photoesListFiltered = this.photoesList.sort((a, b) =>
+              a.name.localeCompare(b.name)
             );
             break;
           case "size":
@@ -54,7 +51,7 @@ export class PhotoesPageComponent implements OnInit, OnDestroy {
             break;
           case "modified":
             this.photoesListFiltered = this.photoesList.sort(
-              (a, b) => (+b.modified - +a.modified)
+              (a, b) => +b.modified - +a.modified
             );
             break;
         }

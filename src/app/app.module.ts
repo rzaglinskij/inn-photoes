@@ -6,12 +6,12 @@ import { LayoutModule } from "./layout/layout.module";
 import { RouterModule, Routes } from "@angular/router";
 import { MainLayoutComponent } from "./layout/main-layout/main-layout.component";
 import { PhotoesPageComponent } from "./photoes/photoes-page/photoes-page.component";
-import {PhotoesModule} from "./photoes/photoes.module";
-import { HttpClientModule} from "@angular/common/http";
-import {FilesModule} from "./files/files.module";
-import {SharingModule} from "./sharing/sharing.module";
-import {FilesPageComponent} from "./files/files-page/files-page.component";
-import {SharingPageComponent} from "./sharing/sharing-page/sharing-page.component";
+import { PhotoesModule } from "./photoes/photoes.module";
+import { HttpClientModule } from "@angular/common/http";
+import { FilesModule } from "./files/files.module";
+import { SharingModule } from "./sharing/sharing.module";
+import { FilesPageComponent } from "./files/files-page/files-page.component";
+import { SharingPageComponent } from "./sharing/sharing-page/sharing-page.component";
 
 const routes: Routes = [
   {
@@ -24,24 +24,22 @@ const routes: Routes = [
       },
       {
         path: "photoes",
-        component: PhotoesPageComponent,
+        component: PhotoesPageComponent
       },
       {
         path: "files",
-        component: FilesPageComponent,
+        component: FilesPageComponent
       },
       {
         path: "sharing",
-        component: SharingPageComponent,
+        component: SharingPageComponent
       }
     ]
   }
 ];
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     RouterModule.forRoot(routes),
@@ -49,7 +47,7 @@ const routes: Routes = [
     HttpClientModule,
     PhotoesModule,
     FilesModule,
-    SharingModule,
+    SharingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

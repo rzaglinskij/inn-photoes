@@ -1,7 +1,13 @@
-import {Component, EventEmitter, OnDestroy, OnInit, Output} from "@angular/core";
+import {
+  Component,
+  EventEmitter,
+  OnDestroy,
+  OnInit,
+  Output
+} from "@angular/core";
 import { FormBuilder, FormGroup } from "@angular/forms";
-import {takeUntil, tap} from "rxjs/operators";
-import {Subject} from "rxjs/internal/Subject";
+import { takeUntil, tap } from "rxjs/operators";
+import { Subject } from "rxjs/internal/Subject";
 
 @Component({
   selector: "app-photoes-header",
@@ -15,11 +21,9 @@ export class PhotoesHeaderComponent implements OnInit, OnDestroy {
 
   photoesFilterForm: FormGroup;
 
-  constructor(
-    private formBuilder: FormBuilder
-  ) {
+  constructor(private formBuilder: FormBuilder) {
     this.photoesFilterForm = this.formBuilder.group({
-      filterBy: [],
+      filterBy: []
     });
   }
 
@@ -27,9 +31,9 @@ export class PhotoesHeaderComponent implements OnInit, OnDestroy {
     this.photoesFilterForm.valueChanges
       .pipe(
         takeUntil(this.ngOnDestroy$),
-        tap((value) => {
+        tap(value => {
           this.filterChanged.emit(value);
-        }),
+        })
       )
       .subscribe();
   }
