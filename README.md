@@ -2,7 +2,7 @@
 
 ## Application used: Angular 8, Bootstrap 4
 
-/ - angular application. Running on http://localhost:4200
+/ - angular application. Running on http://localhost:4200<br>
 /mock - express server mock server. Running on http://localhost:3001
 
 ## commands to start project:
